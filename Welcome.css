@@ -1,0 +1,29 @@
+a {
+  color: black;
+  text-decoration: underline; 
+}
+body {
+  font-family: sans-serif;
+  color: #40c98d;
+  background-color: #27394a;
+  padding: 5%; 
+}
+
+  /* font-family: sans-serif;
+  color: #40c98d;
+  background-color: #27394a;
+  padding: 5%; */
+
+  /* background-image: url("/Images/Background.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat ;
+  background-position: center ;
+  backdrop-filter: ; */
+
+  /* .Background {
+  width: 500px;
+  height: 500px;
+  background-image: url(/Images/Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; */
+

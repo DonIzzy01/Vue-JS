@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=deice-width" />
+    <title>VUE PRACTICAL LESSON</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+  </head>
+  <body>
+    <h1>Welcome Vue JS Practical App</h1>
+    <hr />
+
+    <!--  To enable user input  -->
+    <div id="inputForm">
+      <p>{{ inputText }}</p>
+      <input v-model="inputText" />
+    </div>
+
+    <!-- To Enable User Interaction -->
+    <div id="textToReverse">
+      <p>{{ text }}</p>
+      <button v-on: click="checkResult">Check The Result</button>
+    </div>
+    <h2>NEW</h2>
+    <!-- To Carry Hide Or Show Conditions -->
+    <div id="conditionalVisibility">
+      <span v-if="visible">Visible Content</span>
+    </div>
+
+    <!--Building A List With Vue Js ol-ordered while ul-unordered-->
+    <div id="list">
+      <ol>
+        <li v-for="eachItem in listItems">{{ eachItem.item }}</li>
+      </ol>
+    </div>
+
+    <!--Building A Timer-->
+    <div id="timer">Timer: {{ timer }}</div>
+
+    <!--Build A Reactive Behavior-->
+    <h3>Hover Over Element To See</h3>
+    <div id="to-hover-element">
+      <span v-bind:title="onHoverText"> Hover Over The Text </span>
+    </div>
+
+    <br />
+    <hr />
+
+    <!--Using Vue To Loop-->
+    <h1>Using Vue To Loop</h1>
+    <div id="loop-range">
+      <span v-for="number in 20">
+        {{ number }}
+        <br />
+      </span>
+    </div>
+
+    <br />
+
+    <!--To-Loop-List-->
+    <ol id="To-Loop-List">
+      <li v-for="item in items">{{ item.content }}</li>
+    </ol>
+
+    <!--to-loop-list2-->
+    <ol id="to-loop-list2">
+      <li v-for="(item,index) in items">{{ index }} - {{ item.content }}</li>
+    </ol>
+
+    <!--loop through an object-->
+    <ol id="loop-through-object-values">
+      <li v-for="value in sampleObject">{{ value }}</li>
+    </ol>
+
+    <ol id="dog-list">
+      <li v-for="(value,name) in dogObject">{{ name }} - {{ value }}</li>
+    </ol>
+
+    <ul id="cat-list">
+      <li v-for="(value,name,index) in catObject">
+        {{ index }} : {{ name }} : {{ value }}
+      </li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <!--building an input field-->
+    <div id="form">
+      <label for="full-name">Full Name</label>
+      <input
+        id="full-name"
+        v-model="inputText02"
+        placeholder="E.g Obi Israel"
+      />
+      <p>{{ inputText02 }}</p>
+
+      <!--Building a Text Area-->
+      <p>Enter your Question/Comment</p>
+      <p style="white-space: pre-line">{{ textAreaContent }}</p>
+      <textarea
+        v-model="textAreaContent"
+        placeholder="Eg. I have a question..."
+      >
+      </textarea>
+
+      <p>How Did You Here About Us</p>
+      <select v-model="selected">
+        <option v-for="option in options" v-bind:value="option.value">
+          {{ option.text}}
+        </option>
+      </select>
+      <span>{{ selected }}</span>
+
+      <p>Who is This Message for?</p>
+
+      <input
+        type="checkbox"
+        id="question"
+        value="QuestionsTeam"
+        v-model="checkedOptions"
+      />
+      <label for="question">Questions Team</label>
+
+      <input
+        type="checkbox"
+        id="comments"
+        value="CommentsTeam"
+        v-model="checkedOptions"
+      />
+      <label for="comments">Comments Team</label>
+
+      <input
+        type="checkbox"
+        id="head-office"
+        value="headOffice"
+        v-model="checkedOptions"
+      />
+      <label for="head-office">Head Office</label>
+
+      <br />
+      <span>selected: {{ checkedOptions }}</span>
+
+      <p>What Kind of Product Are You Inquiring About?</p>
+
+      <input
+        type="radio"
+        id="courses"
+        value="Courses"
+        v-model="radioButtonPicked"
+      />
+      <label for="courses">Courses</label>
+
+      <input
+        type="radio"
+        id="books"
+        value="Books"
+        v-model="radioButtonPicked"
+      />
+      <label for="books">Books</label>
+
+      <input
+        type="radio"
+        id="games"
+        value="Games"
+        v-model="radioButtonPicked"
+      />
+      <label for="games">Games</label>
+
+      <br />
+
+      <span>Chosen: {{ radioButtonPicked }}</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

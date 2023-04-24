@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Looping</title>
+    <link href="loop.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+  </head>
+  <body>
+    <h1>LOOPING</h1>
+    <hr />
+
+    <div id="loop-range">
+      <span v-for="number in 20"> {{ number }} <br /></span>
+    </div>
+
+    <hr />
+
+    <!-- looping through an array (ol-ordered list and ul-unordered list)-->
+    <ol id="to-loop-array">
+      <li v-for="item in items">{{ item.content }}</li>
+    </ol>
+
+    <!-- adding ihdexes -->
+    <ol id="looping-array">
+      <li v-for="(item, index) in items">{{ item.content }} - {{ index }}</li>
+    </ol>
+
+    <script src="loop.js"></script>
+  </body>
+</html>

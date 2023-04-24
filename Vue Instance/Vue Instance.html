@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Instance</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  </head>
+  <body>
+    <h1>Welcome Vue JS Presentaion</h1>
+    <hr />
+
+    <div id="my_instance">
+      <h1>Hello Welcome to {{ name }}</h1>
+    </div>
+
+    <script>
+      var vm = new Vue({
+        el: "#my_instance",
+        data: {
+          name: "Vue Intance ",
+        },
+      });
+    </script>
+    <script src="script Instance.js"></script>
+  </body>
+</html>

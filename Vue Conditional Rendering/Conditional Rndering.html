@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Conditional Rendering</title>
+    <link href="style rendering.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+  </head>
+  <body>
+    <h1>Conditional Rendering (Hide and Show conditions)</h1>
+    <hr />
+
+    <div id="app">
+      <span v-if="visible">Visible content</span>
+    </div>
+    <p>
+      In Vue.js, directives are special attributes that allow you to apply
+      special behavior to DOM elements. Directives are denoted by the `v-`
+      prefix in the HTML template. Here are some common directives in Vue.js:
+    </p>
+    <p>
+      1. `v-if` and `v-show`: These directives are used for conditional
+      rendering of elements. `v-if` will completely remove or add the element
+      based on the condition, while `v-show` will toggle the element's
+      visibility.
+    </p>
+    <p>
+      2. `v-for`: This directive is used to render a list of items based on an
+      array or an object.
+    </p>
+    <p>
+      3. `v-bind` or `:`: This directive is used to dynamically bind an
+      attribute to a value or an expression.
+    </p>
+    <p>
+      4. `v-on` or`@`: This directive is used to attach event listeners to
+      elements and bind them to a method in the component.
+    </p>
+    <p>
+      5. `v-model`: This directive is used for two-way data binding between form
+      input elements and the component's data.
+    </p>
+    <p>
+      6. `v-cloak`: This directive is used to hide the uncompiled Vue.js
+      templates until they are compiled and ready to render. These are just a
+      few of the directives available in Vue.js. You can also create your own
+      custom directives to extend the functionality of Vue.js.
+    </p>
+    <script src="Conditional Rendering.js"></script>
+  </body>
+</html>
